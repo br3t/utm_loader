@@ -6,7 +6,7 @@ $(document).ready(function() {
 	for(var i = 0; i < searchParts.length; i++) {
 		var parameter = searchParts[i].split('=');
 		if(parameter[0] == 'utm_key') {
-			if($.inArray(parameter[1], knownKeys)) {
+			if($.inArray(parameter[1], knownKeys) > -1) {
 				key = parameter[1];
 			}
 		}
